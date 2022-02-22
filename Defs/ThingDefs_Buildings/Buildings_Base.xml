@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="PNF_BuildingBase" Abstract="True">
+    <placeWorkers>
+      <li>PipeNetFramework.PlaceWorkers.PlaceWorker_Pipe</li>
+    </placeWorkers>
+  </ThingDef>
+</Defs>

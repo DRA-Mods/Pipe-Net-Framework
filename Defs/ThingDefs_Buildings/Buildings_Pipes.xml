@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="PNF_Pipe" Abstract="True">
+    <defName>PNF_UniversalPipe</defName>
+    <label>universal pipe</label>
+    <description>A multi-purpose pipe with several built-in chambers, capable of transferring many different types of liquids and gasses.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Linked/Pipe_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom6</li>
+      </linkFlags>
+      <damageData>
+        <rect>(0,0.35,1,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/Pipe_MenuIcon</uiIconPath>
+    <uiIconScale>0.7</uiIconScale>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Pipe_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawerType>MapMeshOnly</drawerType>
+    <altitudeLayer>Conduits</altitudeLayer>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToBuild>35</WorkToBuild>
+      <Flammability>0.7</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costList>
+      <Steel>3</Steel>
+    </costList>
+    <!-- Remember to put your comp in as well (and your def if you aren't using universal network), this one won't get inherited -->
+    <comps>
+      <li Class="PipeNetFramework.Comps.CompProperties_Pipe">
+        <isPipe>true</isPipe>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PipeNetFramework.PlaceWorkers.PlaceWorker_Pipe</li>
+    </placeWorkers>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <clearBuildingArea>false</clearBuildingArea>
+    <tickerType>Never</tickerType>
+  </ThingDef>
+
+  <ThingDef ParentName="PNF_Pipe" Name="PNF_UndergroundPipe" Abstract="True">
+    <defName>PNF_UndergroundPipe</defName>
+    <label>underground universal pipe</label>
+    <description>Reinforced pipe for transmitting liquids and gasses, can be built underwater.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/UndergroundPipe_Atlas</texPath>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/UndergroundPipe_MenuIcon</uiIconPath>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <!-- Remember to put your comp in as well (and your def if you aren't using universal network), this one won't get inherited -->
+    <comps Inherit="False">
+      <li Class="PipeNetFramework.Comps.CompProperties_Pipe">
+        <isPipe>true</isPipe>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded></terrainAffordanceNeeded>
+  </ThingDef>
+</Defs>

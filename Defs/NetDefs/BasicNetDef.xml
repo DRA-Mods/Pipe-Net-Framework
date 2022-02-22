@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PipeNetFramework.PipeNet.PipeNetTypeDef Name="PNF_UniversalNetwork">
+    <defName>PNF_UniversalNetwork</defName>
+    <label>universal network</label>
+    <description>A multi-purpose network supporting many different types of liquids and gasses.</description>
+    <storeableDefs>
+      <li>PNF_ChemfuelContent</li>
+    </storeableDefs>
+    <overlayAtlasPath>Things/Building/Linked/PipeTransmitter_Atlas</overlayAtlasPath>
+  </PipeNetFramework.PipeNet.PipeNetTypeDef>
+</Defs>

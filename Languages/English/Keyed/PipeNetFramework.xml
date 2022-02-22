@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <PNF_CannotReplaceNonPipe>Cannot replace non-pipe buildings</PNF_CannotReplaceNonPipe>
+
+  <PNF_DrainPipe>Drain storage</PNF_DrainPipe>
+  <PNF_DrainPipeDesc>If enabled, starts slowly draining contents of this storage into other, connected ones.</PNF_DrainPipeDesc>
+</LanguageData>
